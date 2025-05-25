@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/lovable-uploads/iconlogo.png" />
+    <title>SportsTXT - Creating Value Off the Pitch</title>
+    <meta name="description" content="Sports community platform connecting clubs and fans" />
+    <meta name="author" content="SportsTXT" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Custom CSS -->
+    <style>
+      :root {
+        --sports-red: #E53E3E;
+        --sports-blue: #2B6CB0;
+        --sports-light-blue: #EBF8FF;
+        --sports-gray: #718096;
+        --sports-light-gray: #F7FAFC;
+      }
+      
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      
+      .bg-sports-red { background-color: var(--sports-red) !important; }
+      .bg-sports-blue { background-color: var(--sports-blue) !important; }
+      .bg-sports-light-blue { background-color: var(--sports-light-blue) !important; }
+      .bg-sports-light-gray { background-color: var(--sports-light-gray) !important; }
+      .text-sports-red { color: var(--sports-red) !important; }
+      .text-sports-blue { color: var(--sports-blue) !important; }
+      .text-sports-gray { color: var(--sports-gray) !important; }
+      
+      .btn-sports-red {
+        background-color: var(--sports-red);
+        border-color: var(--sports-red);
+        color: white;
+      }
+      
+      .btn-sports-red:hover {
+        background-color: #C53030;
+        border-color: #C53030;
+        color: white;
+      }
+      
+      .btn-sports-blue {
+        background-color: var(--sports-blue);
+        border-color: var(--sports-blue);
+        color: white;
+      }
+      
+      .btn-sports-blue:hover {
+        background-color: #2C5282;
+        border-color: #2C5282;
+        color: white;
+      }
+      
+      .navbar-scroll {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+      }
+      
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      .parallax {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+      
+      .hero-gradient {
+        background: linear-gradient(135deg, var(--sports-blue) 0%, #4299e1 50%, var(--sports-red) 100%);
+      }
+
+      .progress-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(to right, var(--sports-red), var(--sports-blue));
+        z-index: 1060;
+        transition: width 0.15s ease;
+      }
+
+      .bounce-animation {
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-30px);
+        }
+        60% {
+          transform: translateY(-15px);
+        }
+      }
+
+      .scale-hover:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+      }
+
+      .hover-effect:hover {
+        color: var(--sports-red) !important;
+        transition: color 0.3s ease;
+      }
+
+      .pulse-animation {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: .5;
+        }
+      }
+    </style>
+
+    <meta property="og:title" content="SportsTXT - Creating Value Off the Pitch" />
+    <meta property="og:description" content="Sports community platform connecting clubs and fans" />
+    <meta property="og:type" content="website" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    </head>
+
+  <body>
+    <div id="root"></div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
