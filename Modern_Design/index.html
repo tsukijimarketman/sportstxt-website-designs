@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="lovable-uploads/iconlogo.png" />
+    <link rel="icon" type="image/png" href="/lovable-uploads/iconlogo.png" />
     <title>SportsTXT - Creating Value Off the Pitch</title>
     <meta name="description" content="Sports community platform connecting clubs and fans" />
     <meta name="author" content="SportsTXT" />
@@ -30,8 +30,125 @@
       body {
         font-family: 'Poppins', sans-serif;
       }
+      
+      .bg-sports-red { background-color: var(--sports-red) !important; }
+      .bg-sports-blue { background-color: var(--sports-blue) !important; }
+      .bg-sports-light-blue { background-color: var(--sports-light-blue) !important; }
+      .bg-sports-light-gray { background-color: var(--sports-light-gray) !important; }
+      .text-sports-red { color: var(--sports-red) !important; }
+      .text-sports-blue { color: var(--sports-blue) !important; }
+      .text-sports-gray { color: var(--sports-gray) !important; }
+      
+      .btn-sports-red {
+        background-color: var(--sports-red);
+        border-color: var(--sports-red);
+        color: white;
+      }
+      
+      .btn-sports-red:hover {
+        background-color: #C53030;
+        border-color: #C53030;
+        color: white;
+      }
+      
+      .btn-sports-blue {
+        background-color: var(--sports-blue);
+        border-color: var(--sports-blue);
+        color: white;
+      }
+      
+      .btn-sports-blue:hover {
+        background-color: #2C5282;
+        border-color: #2C5282;
+        color: white;
+      }
+      
+      .navbar-scroll {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+      }
+      
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      .parallax {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+      
+      .hero-gradient {
+        background: linear-gradient(135deg, var(--sports-blue) 0%, #4299e1 50%, var(--sports-red) 100%);
+      }
 
-      /* Other styles omitted for brevity... */
+      .progress-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(to right, var(--sports-red), var(--sports-blue));
+        z-index: 1060;
+        transition: width 0.15s ease;
+      }
+
+      .bounce-animation {
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-30px);
+        }
+        60% {
+          transform: translateY(-15px);
+        }
+      }
+
+      .scale-hover:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+      }
+
+      .hover-effect:hover {
+        color: var(--sports-red) !important;
+        transition: color 0.3s ease;
+      }
+
+      .pulse-animation {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: .5;
+        }
+      }
     </style>
 
     <meta property="og:title" content="SportsTXT - Creating Value Off the Pitch" />
@@ -39,7 +156,7 @@
     <meta property="og:type" content="website" />
     
     <meta name="twitter:card" content="summary_large_image" />
-  </head>
+    </head>
 
   <body>
     <div id="root"></div>
@@ -49,6 +166,6 @@
     
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="src/main.tsx"></script>  <!-- Corrected path -->
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
