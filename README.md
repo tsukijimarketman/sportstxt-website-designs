@@ -4,14 +4,14 @@ Welcome to the SportsTXT website designs repository! Here you'll find multiple d
 
 ## Available Designs
 
-Here are the current available designs in this repository:
+Here are the current available designs in this repository (the websites are hosted and readily available to view realtime) :
 
-1. **[🚀 Modern Design - Click to see design](https://sportstxt-website-designs.vercel.app/)**
+1. **[🚀 Modern Design - Click to see the website](https://sportstxt-website-designs.vercel.app/)**
 
    - A modern, sleek design perfect for a professional sports platform.
    - Features dynamic elements like animated sections, smooth transitions, and responsive layouts.
 
-2. **[✨ Minimalist Design - Click to see design](https://minimalist-design-eight.vercel.app/)** 
+2. **[✨ Minimalist Design - Click to see website](https://minimalist-design-eight.vercel.app/)** 
 
    - A minimalistic, no-fuss layout focusing on content and simplicity.
    - Lightweight and fast with easy-to-read typography and plenty of whitespace.
