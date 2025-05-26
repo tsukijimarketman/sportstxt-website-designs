@@ -11,7 +11,7 @@ Here are the current available designs in this repository:
    - A modern, sleek design perfect for a professional sports platform.
    - Features dynamic elements like animated sections, smooth transitions, and responsive layouts.
 
-2. **[✨ Minimalist Design - Click to see design](#)** *(Coming Soon)*
+2. **[✨ Minimalist Design - Click to see design](https://minimalist-design-eight.vercel.app/)** 
 
    - A minimalistic, no-fuss layout focusing on content and simplicity.
    - Lightweight and fast with easy-to-read typography and plenty of whitespace.
