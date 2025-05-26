@@ -114,7 +114,7 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="d-flex justify-content-center mt-3">
-                    <img src="/lovable-uploads/nmsbg.png" alt="NMS Logo" className="img-fluid" style={{ maxHeight: '60px' }} />
+                    <img src="/assets/nmsbg.png" alt="NMS Logo" className="img-fluid" style={{ maxHeight: '60px' }} />
                   </div>
                 </div>
 

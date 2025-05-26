@@ -6,11 +6,12 @@ import AuthDialog from './AuthDialog';
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showAuthDialog, setShowAuthDialog] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -20,17 +21,17 @@ const Navigation = () => {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/features', label: 'Features' },
-    { path: '/about', label: 'About Us' },
+    { path: '/about', label: 'About' },
     { path: '/contact', label: 'Contact' },
   ];
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+      <nav className={`navbar navbar-expand-lg fixed-top elegant-navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
         <div className="container">
           <Link to="/" className="navbar-brand">
             <img
-              src="/assets/9cdc027d-9330-47dc-b61c-117ad79e31ae.png"
+              src="/assets/249b7763-a933-4602-8cc3-6f713fad483c.png"
               alt="SportsTXT"
               height="40"
               className="d-inline-block align-text-top"
@@ -38,30 +39,31 @@ const Navigation = () => {
           </Link>
 
           <button
-            className="navbar-toggler border-0"
+            className="navbar-toggler border-0 p-2"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-controls="navbarNav"
-            aria-expanded="false"
+            aria-expanded={isMenuOpen}
             aria-label="Toggle navigation"
-            style={{ boxShadow: 'none' }}
+            style={{ 
+              boxShadow: 'none',
+              background: 'rgba(30, 64, 175, 0.1)',
+              borderRadius: '8px'
+            }}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto me-3">
+          <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbarNav">
+            <ul className="navbar-nav ms-auto me-4">
               {navLinks.map((link) => (
-                <li key={link.path} className="nav-item px-2">
+                <li key={link.path} className="nav-item mx-2">
                   <Link
                     to={link.path}
-                    className={`nav-link fw-semibold navbar-link ${
-                      location.pathname === link.path
-                        ? 'text-danger active-page'
-                        : 'text-secondary'
+                    className={`nav-link nav-link-elegant ${
+                      location.pathname === link.path ? 'active' : ''
                     }`}
-                    style={{ fontSize: '1rem' }}
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     {link.label}
                   </Link>
@@ -69,8 +71,11 @@ const Navigation = () => {
               ))}
             </ul>
             <button
-              onClick={() => setShowAuthDialog(true)}
-              className="btn btn-danger rounded-pill px-4 fw-semibold"
+              onClick={() => {
+                setShowAuthDialog(true);
+                setIsMenuOpen(false);
+              }}
+              className="btn btn-primary"
             >
               Get Started
             </button>
@@ -82,18 +87,6 @@ const Navigation = () => {
         show={showAuthDialog} 
         onHide={() => setShowAuthDialog(false)} 
       />
-
-      <style>{`
-        .navbar-link {
-          transition: color 0.3s ease !important;
-        }
-        .navbar-link:hover:not(.active-page) {
-          color: #0d6efd !important;
-        }
-        .active-page {
-          color: #dc3545 !important;
-        }
-      `}</style>
     </>
   );
 };
