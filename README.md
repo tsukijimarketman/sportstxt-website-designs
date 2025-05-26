@@ -6,7 +6,7 @@ Welcome to the SportsTXT website designs repository! Here you'll find multiple d
 
 Here are the current available designs in this repository (the websites are hosted and readily available to view in real-time):
 
-1. **[🚀 Modern Design - Click to see the website](https://sportstxt-website-designs.vercel.app/)**
+1. **[🚀 Modern Design - Click to see website](https://sportstxt-website-designs.vercel.app/)**
 
    - A modern, sleek design perfect for a professional sports platform.
    - Features dynamic elements like animated sections, smooth transitions, and responsive layouts.
