@@ -1,0 +1,53 @@
+
+/* Bootstrap is loaded from CDN in index.html */
+
+/* Custom animations and utilities for Bootstrap */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.8s ease-out;
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+.filter-invert {
+  filter: brightness(0) invert(1);
+}
+
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+.z-index-50 {
+  z-index: 50;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
